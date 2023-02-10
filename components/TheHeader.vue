@@ -54,7 +54,7 @@
             >
             <div class="flex gap-6 md:hidden">
               <HeaderSoMe>
-                <img src="~/assets/icons/linkedin.svg"
+                <img src="~/assets/icons/linkedinHeader.svg"
               /></HeaderSoMe>
               <HeaderSoMe> <img src="~/assets/icons/github.svg" /></HeaderSoMe>
             </div>

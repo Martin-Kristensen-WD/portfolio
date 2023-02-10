@@ -1,15 +1,25 @@
 <template>
   <div>
     <div class="cursor"></div>
-    <IntroSection />
-    <ProjectsSection />
-    <AboutSection />
+    <IntroSection :page="page" />
+    <ProjectsSection :projects="projects" />
+    <AboutSection :page="page" />
     <TheFooter />
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    page: {
+      type: Object,
+      default: () => {},
+    },
+    projects: {
+      type: Object,
+      default: () => {},
+    },
+  },
   beforeMount() {
     const cursor = document.querySelector('.cursor')
     document.addEventListener('mousemove', function (e) {
