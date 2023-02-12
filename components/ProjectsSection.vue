@@ -11,16 +11,19 @@
       <div
         v-for="project in projects.data"
         :key="project.id"
-        class="col-span-3 md:col-span-1 flex flex-col h-full justify-between bg-mobileMenu px-4 py-4 rounded-3xl"
+        class="col-span-3 md:col-span-1 flex flex-col h-full justify-between bg-mobileMenu px-4 py-4 rounded-3xl shadow-lg"
       >
+        <!-- CHANGE TO :STYLE:BG-IMAGE  -->
         <div>
-          <img
-            class="rounded-tl-2xl rounded-tr-2xl"
-            :src="
+          <div
+            class="bg-image h-60 md:h-40 lg:h-60"
+            :style="
+              'background-image: url(' +
               'http://localhost:1337' +
-              project.attributes.featuredImage.data.attributes.url
+              project.attributes.featuredImage.data.attributes.url +
+              ');'
             "
-          />
+          ></div>
           <h3 class="pt-4 pb-2">{{ project.attributes.title }}</h3>
           <p>{{ project.attributes.shortDescription }}</p>
         </div>
@@ -33,8 +36,9 @@
               >{{ tag }}</SmallTags
             >
           </div>
-
-          <PrimaryButton class="md:w-max px-12">View</PrimaryButton>
+          <NuxtLink :to="project.attributes.slug">
+            <PrimaryButton class="md:w-max px-12">View</PrimaryButton>
+          </NuxtLink>
         </div>
       </div>
     </div>
