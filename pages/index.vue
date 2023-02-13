@@ -4,6 +4,7 @@
     <IntroSection :page="page" />
     <ProjectsSection :projects="projects" />
     <AboutSection :page="page" />
+    <ExperienceSection :experience="experience" />
     <TheFooter />
   </div>
 </template>
@@ -19,8 +20,12 @@ export default {
       type: Object,
       default: () => {},
     },
+    experience: {
+      type: Object,
+      default: () => {},
+    },
   },
-  beforeMount() {
+  mounted() {
     const cursor = document.querySelector('.cursor')
     document.addEventListener('mousemove', function (e) {
       cursor.style.cssText =

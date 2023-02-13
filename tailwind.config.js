@@ -15,10 +15,11 @@ export default {
       colors: {
         dark: '#1c1f2d',
         mediumDark: '#262838',
-        glow: '#39333d',
+        glow: '#423a3e',
         primary: '#FFBB7C',
         primaryHover: '#FFA451',
         mobileMenu: '#37333D',
+        lightGray: '#E4E4E4',
       },
       fontFamily: {
         unbounded: ['Unbounded', 'sans-serif'],

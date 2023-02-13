@@ -7,7 +7,7 @@
       <div class="col-span-3">
         <NuxtLink class="flex" to="/"
           ><img src="~/assets/icons/arrow-left.svg" />
-          <p class="pl-4 font-unbounded font-light">
+          <p class="pl-4 font-unbounded font-light text-sm">
             Back to projects
           </p></NuxtLink
         >
@@ -28,12 +28,15 @@
             >{{ tag }}</LargeTags
           >
         </div>
+
         <PrimaryButton v-if="project.data[0].attributes.URL" class="mt-12"
-          >View online</PrimaryButton
+          ><a :href="project.data[0].attributes.URL"
+            >View online</a
+          ></PrimaryButton
         >
       </div>
     </div>
-    <!--  {{ project.data[0].attributes.images.data[2] }} -->
+    <!--  {{ project.data[0].attributes }} -->
     <!-- IMAGES -->
     <div class="grid grid-cols-12 gap-6 container px-6 mx-auto py-12 md:py-20">
       <div

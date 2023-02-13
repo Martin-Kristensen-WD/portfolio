@@ -3,6 +3,7 @@
     class="bg-gradient-to-tr from-dark via-mediumDark to-glow text-white font-unbounded"
   >
     <div
+      id="footer"
       class="grid grid-cols-3 place-items-center max-w-xs mx-auto py-12 lg:py-32"
     >
       <h4 class="text-center col-span-3 pb-6 lg:pb-12">Get in touch</h4>

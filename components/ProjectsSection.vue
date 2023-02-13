@@ -5,6 +5,7 @@
   >
     <div
       v-if="projects.data"
+      id="projects"
       class="grid grid-cols-3 gap-12 md:gap-4 lg:gap-8 container mx-auto px-6"
     >
       <h2 class="col-span-3">Projects</h2>
@@ -15,15 +16,17 @@
       >
         <!-- CHANGE TO :STYLE:BG-IMAGE  -->
         <div>
-          <div
-            class="bg-image h-60 md:h-40 lg:h-60"
-            :style="
-              'background-image: url(' +
-              'http://localhost:1337' +
-              project.attributes.featuredImage.data.attributes.url +
-              ');'
-            "
-          ></div>
+          <NuxtLink :to="project.attributes.slug">
+            <div
+              class="bg-image h-60 md:h-40 lg:h-60"
+              :style="
+                'background-image: url(' +
+                'http://localhost:1337' +
+                project.attributes.featuredImage.data.attributes.url +
+                ');'
+              "
+            ></div>
+          </NuxtLink>
           <h3 class="pt-4 pb-2">{{ project.attributes.title }}</h3>
           <p>{{ project.attributes.shortDescription }}</p>
         </div>

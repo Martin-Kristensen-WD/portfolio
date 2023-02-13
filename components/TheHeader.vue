@@ -65,21 +65,21 @@
         <ul
           class="hidden md:flex flex-row items-center items-center space-x-20 cursor-pointer"
         >
-          <NuxtLink to="https://nuxtjs.org"
+          <NuxtLink to="#projects"
             ><li
               class="text-base hover:text-primary transition duration-300 ease-in-out"
             >
               Projects
             </li></NuxtLink
           >
-          <NuxtLink to="https://nuxtjs.org"
+          <NuxtLink to="#about"
             ><li
               class="text-base hover:text-primary transition duration-300 ease-in-out"
             >
               About
             </li></NuxtLink
           >
-          <NuxtLink to="https://nuxtjs.org"
+          <NuxtLink to="#footer"
             ><li
               class="text-base hover:text-primary transition duration-300 ease-in-out"
             >

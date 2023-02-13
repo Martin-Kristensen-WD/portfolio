@@ -8,7 +8,7 @@
       <div class="col-span-3 md:col-span-2">
         <p
           v-if="page.data"
-          class="font-unbounded font-light text-xs lg:text-base flex place-items-center"
+          class="font-unbounded uppercase font-light text-xs lg:text-base flex place-items-center"
         >
           <span class="pr-1"><img src="~/assets/icons/circles.svg" /></span>
           {{ page.data.attributes.tagline }}
