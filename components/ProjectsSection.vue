@@ -18,7 +18,7 @@
         <div>
           <NuxtLink :to="project.attributes.slug">
             <div
-              class="bg-image h-60 md:h-40 lg:h-60"
+              class="rounded-t-2xl bg-image h-60 md:h-40 lg:h-60"
               :style="
                 'background-image: url(' +
                 'http://localhost:1337' +
@@ -27,10 +27,13 @@
               "
             ></div>
           </NuxtLink>
-          <h3 class="pt-4 pb-2">{{ project.attributes.title }}</h3>
+          <h3 class="pt-4 pb-2 text-primary">{{ project.attributes.title }}</h3>
           <p>{{ project.attributes.shortDescription }}</p>
         </div>
         <div>
+          <p v-if="project.attributes.technologies" class="font-bold pt-4">
+            Built with
+          </p>
           <div class="flex flex-row flex-wrap gap-2 pt-4 pb-6">
             <SmallTags
               v-for="tag in project.attributes.technologies"
@@ -40,7 +43,7 @@
             >
           </div>
           <NuxtLink :to="project.attributes.slug">
-            <PrimaryButton class="md:w-max px-12">View</PrimaryButton>
+            <PrimaryButton class="md:w-max px-12">View project</PrimaryButton>
           </NuxtLink>
         </div>
       </div>

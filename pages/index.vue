@@ -4,7 +4,7 @@
     <IntroSection :page="page" />
     <ProjectsSection :projects="projects" />
     <AboutSection :page="page" />
-    <ExperienceSection :experience="experience" />
+    <ExperienceSection :experience="experience" :page="page" />
     <TheFooter />
   </div>
 </template>

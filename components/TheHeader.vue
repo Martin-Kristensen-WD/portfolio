@@ -24,7 +24,7 @@
         </div>
 
         <div
-          class="absolute top-0 left-0 w-screen h-screen bg-mobileMenu transition duration-500 ease-in-out md:hidden"
+          class="absolute top-0 left-0 w-screen h-screen bg-primaryHover transition duration-500 ease-in-out md:hidden"
           :class="showMenu ? 'opcaity-100' : 'opacity-0'"
         >
           <ul
@@ -33,30 +33,32 @@
           >
             <NuxtLink to="https://nuxtjs.org"
               ><li
-                class="text-base hover:text-primary transition duration-300 ease-in-out"
+                class="text-lg hover:text-primary transition duration-300 ease-in-out"
               >
                 Projects
               </li></NuxtLink
             >
             <NuxtLink to="https://nuxtjs.org"
               ><li
-                class="text-base hover:text-primary transition duration-300 ease-in-out"
+                class="text-lg hover:text-primary transition duration-300 ease-in-out"
               >
                 About
               </li></NuxtLink
             >
             <NuxtLink to="https://nuxtjs.org"
               ><li
-                class="text-base hover:text-primary transition duration-300 ease-in-out"
+                class="text-lg hover:text-primary transition duration-300 ease-in-out"
               >
                 Get in touch
               </li></NuxtLink
             >
             <div class="flex gap-6 md:hidden">
-              <HeaderSoMe>
-                <img src="~/assets/icons/linkedinHeader.svg"
-              /></HeaderSoMe>
-              <HeaderSoMe> <img src="~/assets/icons/github.svg" /></HeaderSoMe>
+              <FooterSome>
+                <img src="~/assets/icons/linkedinLarge.svg"
+              /></FooterSome>
+              <FooterSome>
+                <img src="~/assets/icons/githubLarge.svg"
+              /></FooterSome>
             </div>
           </ul>
         </div>
@@ -65,7 +67,7 @@
         <ul
           class="hidden md:flex flex-row items-center items-center space-x-20 cursor-pointer"
         >
-          <NuxtLink to="#projects"
+          <NuxtLink href="#projects"
             ><li
               class="text-base hover:text-primary transition duration-300 ease-in-out"
             >
@@ -87,9 +89,7 @@
             </li></NuxtLink
           >
           <div class="flex gap-6 md:hidden">
-            <HeaderSoMe>
-              <img src="~/assets/icons/linkedinHeader.svg"
-            /></HeaderSoMe>
+            <HeaderSoMe> <img src="~/assets/icons/linkedin.svg" /></HeaderSoMe>
             <HeaderSoMe> <img src="~/assets/icons/github.svg" /></HeaderSoMe>
           </div>
         </ul>
@@ -97,7 +97,7 @@
         <!-- Desktop SoMe -->
         <div class="hidden md:flex md:gap-6">
           <HeaderSoMe
-            ><img class="z-30" src="~/assets/icons/linkedinHeader.svg"
+            ><img class="z-30" src="~/assets/icons/linkedin.svg"
           /></HeaderSoMe>
           <HeaderSoMe
             ><img class="z-30" src="~/assets/icons/github.svg"

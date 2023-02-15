@@ -50,7 +50,7 @@ export default {
 
     try {
       const response3 = await fetch(
-        'http://localhost:1337/api/experiences?populate=*',
+        'http://localhost:1337/api/experiences?populate=*&sort=createdAt:ASC',
         {
           method: 'GET',
           headers: this.headers,

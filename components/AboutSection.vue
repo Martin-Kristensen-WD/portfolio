@@ -7,16 +7,8 @@
         <h2>About me</h2>
         <img class="mb-12 md:pr-12 md:mb-0" src="~/assets/profile-pic.png" />
       </div>
-      <p v-if="page.data" class="col-span-2 md:col-span-1 md:pt-8 md:pl-6">
+      <p v-if="page.data" class="col-span-2 md:col-span-1 md:pt-16 md:pl-6">
         {{ page.data.attributes.aboutMe }}
-        <a
-          :href="
-            'http://localhost:1337' +
-            page.data.attributes.CV.data.attributes.url
-          "
-        >
-          <PrimaryButton class="my-8">Download CV</PrimaryButton>
-        </a>
       </p>
     </div>
   </div>

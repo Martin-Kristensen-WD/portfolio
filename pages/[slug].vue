@@ -5,12 +5,6 @@
   >
     <div class="container mx-auto grid grid-cols-3 gap-6 md:gap-x-16 px-6 pt-6">
       <div class="col-span-3">
-        <NuxtLink class="flex" to="/"
-          ><img src="~/assets/icons/arrow-left.svg" />
-          <p class="pl-4 font-unbounded font-light text-sm">
-            Back to projects
-          </p></NuxtLink
-        >
         <h1 class="text-primary py-6">
           {{ project.data[0].attributes.title }}
         </h1>
@@ -38,7 +32,7 @@
     </div>
     <!--  {{ project.data[0].attributes }} -->
     <!-- IMAGES -->
-    <div class="grid grid-cols-12 gap-6 container px-6 mx-auto py-12 md:py-20">
+    <div class="grid grid-cols-12 gap-6 container px-6 mx-auto pt-12 md:pt-20">
       <div
         class="col-span-12 md:col-span-5 bg-image h-40 md:h-64 lg:h-96"
         :style="
@@ -77,6 +71,11 @@
           ');'
         "
       ></div>
+    </div>
+    <div class="py-12 lg:py-20">
+      <NuxtLink to="/">
+        <PrimaryButton class="mx-auto">To projects</PrimaryButton>
+      </NuxtLink>
     </div>
   </div>
 </template>
