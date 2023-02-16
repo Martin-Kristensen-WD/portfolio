@@ -1,6 +1,6 @@
 <template>
   <div
-    class="animation w-12 h-12 border border-white border-dashed rounded-full place-items-center grid cursor-pointer"
+    class="animation w-12 h-12 border border-white rounded-full place-items-center grid cursor-pointer"
   >
     <slot></slot>
   </div>

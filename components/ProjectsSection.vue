@@ -6,9 +6,9 @@
     <div
       v-if="projects.data"
       id="projects"
-      class="grid grid-cols-3 gap-12 md:gap-4 lg:gap-8 container mx-auto px-6"
+      class="grid grid-cols-3 gap-12 md:gap-4 lg:gap-8 container mx-auto px-6 pt-12"
     >
-      <h2 class="col-span-3">Projects</h2>
+      <h2 class="col-span-3 md:pb-6 lg:pb-2">Projects</h2>
       <div
         v-for="project in projects.data"
         :key="project.id"

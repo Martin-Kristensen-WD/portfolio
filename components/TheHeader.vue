@@ -31,34 +31,50 @@
             :class="showMenu ? 'flex' : 'hidden'"
             class="flex-col space-y-16 place-items-center mt-32"
           >
-            <NuxtLink to="https://nuxtjs.org"
-              ><li
-                class="text-lg hover:text-primary transition duration-300 ease-in-out"
-              >
-                Projects
-              </li></NuxtLink
+            <li
+              class="text-lg hover:text-primary transition duration-300 ease-in-out"
+              @click="
+                $router.push({ name: 'index', hash: '#projects' }),
+                  (showMenu = false)
+              "
             >
-            <NuxtLink to="https://nuxtjs.org"
-              ><li
-                class="text-lg hover:text-primary transition duration-300 ease-in-out"
-              >
-                About
-              </li></NuxtLink
+              Projects
+            </li>
+            <li
+              class="text-lg hover:text-primary transition duration-300 ease-in-out"
+              @click="
+                $router.push({ name: 'index', hash: '#about' }),
+                  (showMenu = false)
+              "
             >
-            <NuxtLink to="https://nuxtjs.org"
-              ><li
-                class="text-lg hover:text-primary transition duration-300 ease-in-out"
-              >
-                Get in touch
-              </li></NuxtLink
+              About
+            </li>
+            <li
+              class="text-lg hover:text-primary transition duration-300 ease-in-out"
+              @click="
+                $router.push({ name: 'index', hash: '#footer' }),
+                  (showMenu = false)
+              "
             >
+              Get in touch
+            </li>
             <div class="flex gap-6 md:hidden">
-              <FooterSome>
-                <img src="~/assets/icons/linkedinLarge.svg"
-              /></FooterSome>
-              <FooterSome>
-                <img src="~/assets/icons/githubLarge.svg"
-              /></FooterSome>
+              <a
+                href="https://www.linkedin.com/in/kristensen-martin/"
+                target="__blank"
+              >
+                <FooterSome>
+                  <img src="~/assets/icons/linkedinLarge.svg"
+                /></FooterSome>
+              </a>
+              <a
+                href="https://github.com/Martin-Kristensen-WD"
+                target="__blank"
+              >
+                <FooterSome>
+                  <img src="~/assets/icons/githubLarge.svg"
+                /></FooterSome>
+              </a>
             </div>
           </ul>
         </div>
@@ -67,41 +83,58 @@
         <ul
           class="hidden md:flex flex-row items-center items-center space-x-20 cursor-pointer"
         >
-          <NuxtLink href="#projects"
-            ><li
+          <button>
+            <li
               class="text-base hover:text-primary transition duration-300 ease-in-out"
+              @click="$router.push({ name: 'index', hash: '#projects' })"
             >
               Projects
-            </li></NuxtLink
+            </li>
+          </button>
+
+          <li
+            class="text-base hover:text-primary transition duration-300 ease-in-out"
+            @click="$router.push({ name: 'index', hash: '#about' })"
           >
-          <NuxtLink to="#about"
-            ><li
-              class="text-base hover:text-primary transition duration-300 ease-in-out"
-            >
-              About
-            </li></NuxtLink
+            About
+          </li>
+
+          <li
+            class="text-base hover:text-primary transition duration-300 ease-in-out"
+            @click="$router.push({ name: 'index', hash: '#footer' })"
           >
-          <NuxtLink to="#footer"
-            ><li
-              class="text-base hover:text-primary transition duration-300 ease-in-out"
-            >
-              Get in touch
-            </li></NuxtLink
-          >
+            Get in touch
+          </li>
           <div class="flex gap-6 md:hidden">
-            <HeaderSoMe> <img src="~/assets/icons/linkedin.svg" /></HeaderSoMe>
-            <HeaderSoMe> <img src="~/assets/icons/github.svg" /></HeaderSoMe>
+            <a
+              href="https://www.linkedin.com/in/kristensen-martin/"
+              target="__blank"
+            >
+              <HeaderSoMe>
+                <img src="~/assets/icons/linkedin.svg"
+              /></HeaderSoMe>
+            </a>
+            <a href="https://github.com/Martin-Kristensen-WD" target="__blank">
+              <HeaderSoMe> <img src="~/assets/icons/github.svg" /></HeaderSoMe>
+            </a>
           </div>
         </ul>
 
         <!-- Desktop SoMe -->
         <div class="hidden md:flex md:gap-6">
-          <HeaderSoMe
-            ><img class="z-30" src="~/assets/icons/linkedin.svg"
-          /></HeaderSoMe>
-          <HeaderSoMe
-            ><img class="z-30" src="~/assets/icons/github.svg"
-          /></HeaderSoMe>
+          <a
+            href="https://www.linkedin.com/in/kristensen-martin/"
+            target="__blank"
+          >
+            <HeaderSoMe
+              ><img class="z-30" src="~/assets/icons/linkedin.svg"
+            /></HeaderSoMe>
+          </a>
+          <a href="https://github.com/Martin-Kristensen-WD" target="__blank">
+            <HeaderSoMe
+              ><img class="z-30" src="~/assets/icons/github.svg"
+            /></HeaderSoMe>
+          </a>
         </div>
       </nav>
     </div>

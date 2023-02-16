@@ -1,11 +1,9 @@
 <template>
-  <div
-    class="bg-gradient-to-br from-dark via-mediumDark to-glow h-screen text-white"
-  >
+  <div class="bg-gradient-to-br from-dark via-mediumDark to-glow text-white">
     <div
-      class="container mx-auto grid grid-cols-3 place-items-center md:place-items-end px-6 pt-6 md:pt-32"
+      class="container mx-auto grid grid-cols-3 place-items-center md:place-items-end px-6 py-6 md:py-12 lg:py-20"
     >
-      <div class="col-span-3 md:col-span-2">
+      <div class="col-span-3 lg:col-span-2">
         <p
           v-if="page.data"
           class="font-unbounded uppercase font-light text-base flex place-items-center"
@@ -20,7 +18,11 @@
           {{ page.data.attributes.introduction }}
         </p>
         <br />
-        <p>Btw, I hope you’re having a great {{ showDay() }}! 🔆😉</p>
+        <p>
+          I hope you’re having a great
+          <span class="italic">{{ showDay() }}</span
+          >!
+        </p>
       </div>
       <!--       <div
         class="col-span-3 absolute bottom-6 flex items-center md:col-span-1 md:relative md:bottom-0 md:-mr-24"
