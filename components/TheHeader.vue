@@ -17,7 +17,7 @@
               <img
                 class="transition duration-500 ease-in-out"
                 :class="showMenu ? 'opacity-100' : 'opacity-0'"
-                src="/X.svg"
+                src="/x.svg"
               />
             </button>
           </div>
