@@ -23,7 +23,7 @@ export default {
   async mounted() {
     try {
       const response = await fetch(
-        'http://mk-portfolio-backend.herokuapp.com/api/page?populate=*',
+        'http://localhost:1337/api/page?populate=*',
         {
           method: 'GET',
           headers: this.headers,
