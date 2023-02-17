@@ -8,7 +8,7 @@
           v-if="page.data"
           class="font-unbounded uppercase font-light text-base flex place-items-center"
         >
-          <span class="pr-1"><img src="~/assets/icons/circles.svg" /></span>
+          <span class="pr-1"><img src="circles.svg" /></span>
           {{ page.data.attributes.tagline }}
         </p>
         <h1 v-if="page.data" class="text-primary pt-4 pb-6 font-unbounded">

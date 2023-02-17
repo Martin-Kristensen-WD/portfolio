@@ -6,7 +6,7 @@
       <p
         class="font-unbounded font-light uppercase text-base flex place-items-center"
       >
-        <span class="pr-1"><img src="~/assets/icons/circles.svg" /></span>
+        <span class="pr-1"><img src="circles.svg" /></span>
         Featured jobs
       </p>
       <div v-if="experience.data">

@@ -5,7 +5,7 @@
     <div id="about" class="grid grid-cols-2 container mx-auto px-6 py-24">
       <div class="col-span-2 md:col-span-1">
         <h2>About me</h2>
-        <img class="mb-12 md:pr-12 md:mb-0" src="~/assets/profile-pic.png" />
+        <img class="mb-12 md:pr-12 md:mb-0" src="/profile-pic.png" />
       </div>
       <div
         v-if="page.data"

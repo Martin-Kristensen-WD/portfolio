@@ -12,12 +12,12 @@
               <img
                 class="absolute left-0 transition duration-500 ease-in-out"
                 :class="showMenu ? 'opacity-0' : 'opacity-100'"
-                src="~/assets/icons/menu-dots.svg"
+                src="menu-dots.svg"
               />
               <img
                 class="transition duration-500 ease-in-out"
                 :class="showMenu ? 'opacity-100' : 'opacity-0'"
-                src="~/assets/icons/X.svg"
+                src="X.svg"
               />
             </button>
           </div>
@@ -63,17 +63,13 @@
                 href="https://www.linkedin.com/in/kristensen-martin/"
                 target="__blank"
               >
-                <FooterSome>
-                  <img src="~/assets/icons/linkedinLarge.svg"
-                /></FooterSome>
+                <FooterSome> <img src="linkedinLarge.svg" /></FooterSome>
               </a>
               <a
                 href="https://github.com/Martin-Kristensen-WD"
                 target="__blank"
               >
-                <FooterSome>
-                  <img src="~/assets/icons/githubLarge.svg"
-                /></FooterSome>
+                <FooterSome> <img src="githubLarge.svg" /></FooterSome>
               </a>
             </div>
           </ul>
@@ -110,12 +106,10 @@
               href="https://www.linkedin.com/in/kristensen-martin/"
               target="__blank"
             >
-              <HeaderSoMe>
-                <img src="~/assets/icons/linkedin.svg"
-              /></HeaderSoMe>
+              <HeaderSoMe> <img src="linkedin.svg" /></HeaderSoMe>
             </a>
             <a href="https://github.com/Martin-Kristensen-WD" target="__blank">
-              <HeaderSoMe> <img src="~/assets/icons/github.svg" /></HeaderSoMe>
+              <HeaderSoMe> <img src="github.svg" /></HeaderSoMe>
             </a>
           </div>
         </ul>
@@ -126,14 +120,10 @@
             href="https://www.linkedin.com/in/kristensen-martin/"
             target="__blank"
           >
-            <HeaderSoMe
-              ><img class="z-30" src="~/assets/icons/linkedin.svg"
-            /></HeaderSoMe>
+            <HeaderSoMe><img class="z-30" src="linkedin.svg" /></HeaderSoMe>
           </a>
           <a href="https://github.com/Martin-Kristensen-WD" target="__blank">
-            <HeaderSoMe
-              ><img class="z-30" src="~/assets/icons/github.svg"
-            /></HeaderSoMe>
+            <HeaderSoMe><img class="z-30" src="github.svg" /></HeaderSoMe>
           </a>
         </div>
       </nav>
