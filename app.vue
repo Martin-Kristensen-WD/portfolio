@@ -23,7 +23,7 @@ export default {
   async mounted() {
     try {
       const response = await fetch(
-        'http://mk-portfolio-backend.herokuapp.com/api/page?populate=*',
+        'https://mk-portfolio-backend.herokuapp.com/api/page?populate=*',
         {
           method: 'GET',
         }
@@ -37,7 +37,7 @@ export default {
 
     try {
       const response2 = await fetch(
-        'http://mk-portfolio-backend.herokuapp.com/api/projects?populate=*',
+        'https://mk-portfolio-backend.herokuapp.com/api/projects?populate=*',
         {
           method: 'GET',
         }
@@ -51,7 +51,7 @@ export default {
 
     try {
       const response3 = await fetch(
-        'http://mk-portfolio-backend.herokuapp.com/api/experiences?populate=*&sort=createdAt:ASC',
+        'https://mk-portfolio-backend.herokuapp.com/api/experiences?populate=*&sort=createdAt:ASC',
         {
           method: 'GET',
         }

@@ -19,7 +19,7 @@
           <div class="flex flex-wrap gap-4">
             <NuxtLink
               :to="
-                'http://localhost:1337' +
+                'https://mk-portfolio-backend.herokuapp.com' +
                 exp.attributes.recommendation.data.attributes.url
               "
               target="__blank"
@@ -41,7 +41,7 @@
         <NuxtLink
           v-if="page.data"
           :href="
-            'http://localhost:1337' +
+            'https://mk-portfolio-backend.herokuapp.com' +
             page.data.attributes.cv.data.attributes.url
           "
           target="__blank"

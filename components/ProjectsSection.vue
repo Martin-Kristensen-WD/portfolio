@@ -20,7 +20,7 @@
               class="rounded-t-2xl bg-image h-60 md:h-40 lg:h-60"
               :style="
                 'background-image: url(' +
-                'http://mk-portfolio-backend.herokuapp.com' +
+                'https://mk-portfolio-backend.herokuapp.com' +
                 project.attributes.featuredImage.data.attributes.url +
                 ');'
               "

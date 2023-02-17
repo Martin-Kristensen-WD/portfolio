@@ -44,7 +44,7 @@
           class="col-span-12 md:col-span-5 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'http://mk-portfolio-backend.herokuapp.com' +
+            'https://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[0].attributes.url +
             ');'
           "
@@ -54,7 +54,7 @@
           class="col-span-12 md:col-span-7 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'http://mk-portfolio-backend.herokuapp.com' +
+            'https://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[1].attributes.url +
             ');'
           "
@@ -67,7 +67,7 @@
           class="col-span-12 md:col-span-7 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'http://mk-portfolio-backend.herokuapp.com' +
+            'https://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[2].attributes.url +
             ');'
           "
@@ -80,7 +80,7 @@
           class="col-span-12 md:col-span-5 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'http://mk-portfolio-backend.herokuapp.com' +
+            'https://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[3].attributes.url +
             ');'
           "
@@ -114,7 +114,7 @@ export default {
     const { slug } = useRoute().params
     try {
       const response = await fetch(
-        `http://mk-portfolio-backend.herokuapp.com/api/projects?filters[slug][$eq]=${slug}&populate=*`,
+        `https://mk-portfolio-backend.herokuapp.com/api/projects?filters[slug][$eq]=${slug}&populate=*`,
         {
           method: 'GET',
         }
