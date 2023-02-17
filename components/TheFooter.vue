@@ -9,14 +9,14 @@
       <h4 class="text-center col-span-3 pb-6 lg:pb-12">Get in touch</h4>
       <a href="mailto:martin.kristensen096@gmail.com">
         <FooterSome class="col-span-1"
-          ><img class="z-30" src="email.svg"
+          ><img class="z-30" src="/email.svg"
         /></FooterSome>
       </a>
       <a href="tel:23952594">
-        <FooterSome><img class="z-30" src="phone.svg" /></FooterSome>
+        <FooterSome><img class="z-30" src="/phone.svg" /></FooterSome>
       </a>
       <a href="https://www.linkedin.com/in/kristensen-martin/" target="__blank">
-        <FooterSome><img class="z-30" src="linkedinLarge.svg" /></FooterSome>
+        <FooterSome><img class="z-30" src="/linkedinLarge.svg" /></FooterSome>
       </a>
     </div>
   </div>
