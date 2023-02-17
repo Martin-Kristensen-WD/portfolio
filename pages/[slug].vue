@@ -28,7 +28,7 @@
           </div>
 
           <PrimaryButton v-if="project.data[0].attributes.URL" class="mt-12"
-            ><a :href="project.data[0].attributes.URL"
+            ><a :href="project.data[0].attributes.URL" target="_blank"
               >View online</a
             ></PrimaryButton
           >
