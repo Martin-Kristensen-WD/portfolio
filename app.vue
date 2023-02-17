@@ -15,13 +15,15 @@ export default {
       projects: {},
       experience: {},
       error: null,
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+      },
     }
   },
   async mounted() {
     try {
       const response = await fetch(
-        'http://localhost:1337/api/page?populate=*',
+        'http://mk-portfolio-backend.herokuapp.com/api/page?populate=*',
         {
           method: 'GET',
           headers: this.headers,
