@@ -14,14 +14,13 @@
         :key="project.id"
         class="col-span-3 md:col-span-1 flex flex-col h-full justify-between bg-mobileMenu px-4 py-4 rounded-3xl shadow-lg"
       >
-        <!-- CHANGE TO :STYLE:BG-IMAGE  -->
         <div>
           <NuxtLink :to="project.attributes.slug">
             <div
               class="rounded-t-2xl bg-image h-60 md:h-40 lg:h-60"
               :style="
                 'background-image: url(' +
-                'http://localhost:1337' +
+                'http://mk-portfolio-backend.herokuapp.com' +
                 project.attributes.featuredImage.data.attributes.url +
                 ');'
               "

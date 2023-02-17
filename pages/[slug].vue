@@ -40,44 +40,54 @@
         class="grid grid-cols-12 gap-6 container px-6 mx-auto pt-12 md:pt-20"
       >
         <div
+          v-if="project.data"
           class="col-span-12 md:col-span-5 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'http://localhost:1337' +
+            'http://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[0].attributes.url +
             ');'
           "
         ></div>
         <div
+          v-if="project.data"
           class="col-span-12 md:col-span-7 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'http://localhost:1337' +
+            'http://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[1].attributes.url +
             ');'
           "
         ></div>
         <div
-          v-if="project.data[0].attributes.images.data.length > 2"
+          v-if="
+            project.data[0].attributes.images.data[2] &&
+            project.data[0].attributes.images.data.length > 2
+          "
           class="col-span-12 md:col-span-7 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'http://localhost:1337' +
+            'http://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[2].attributes.url +
             ');'
           "
         ></div>
         <div
-          v-if="project.data[0].attributes.images.data.length > 2"
+          v-if="
+            project.data[0].attributes.images.data[3] &&
+            project.data[0].attributes.images.data.length > 2
+          "
           class="col-span-12 md:col-span-5 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'http://localhost:1337' +
+            'http://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[3].attributes.url +
             ');'
           "
         ></div>
+        <!---->
       </div>
+
       <div class="py-12 lg:py-20">
         <button
           class="mx-auto bg-primary px-6 py-3 grid place-items-center rounded-full font-light font-unbounded text-sm hover:bg-primaryHover transition duration-500 ease-in-out"
@@ -104,10 +114,9 @@ export default {
     const { slug } = useRoute().params
     try {
       const response = await fetch(
-        `http://localhost:1337/api/projects?filters[slug][$eq]=${slug}&populate=*`,
+        `http://mk-portfolio-backend.herokuapp.com/api/projects?filters[slug][$eq]=${slug}&populate=*`,
         {
           method: 'GET',
-          headers: this.headers,
         }
       )
         .then(this.checkStatus)

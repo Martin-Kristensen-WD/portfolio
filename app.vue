@@ -23,10 +23,9 @@ export default {
   async mounted() {
     try {
       const response = await fetch(
-        'http://localhost:1337/api/page?populate=*',
+        'http://mk-portfolio-backend.herokuapp.com/api/page?populate=*',
         {
           method: 'GET',
-          headers: this.headers,
         }
       )
         .then(this.checkStatus)
@@ -38,10 +37,9 @@ export default {
 
     try {
       const response2 = await fetch(
-        'http://localhost:1337/api/projects?populate=*',
+        'http://mk-portfolio-backend.herokuapp.com/api/projects?populate=*',
         {
           method: 'GET',
-          headers: this.headers,
         }
       )
         .then(this.checkStatus)
@@ -53,10 +51,9 @@ export default {
 
     try {
       const response3 = await fetch(
-        'http://localhost:1337/api/experiences?populate=*&sort=createdAt:ASC',
+        'http://mk-portfolio-backend.herokuapp.com/api/experiences?populate=*&sort=createdAt:ASC',
         {
           method: 'GET',
-          headers: this.headers,
         }
       )
         .then(this.checkStatus)
