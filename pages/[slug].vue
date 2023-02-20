@@ -44,7 +44,6 @@
           class="col-span-12 md:col-span-5 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'https://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[0].attributes.url +
             ');'
           "
@@ -54,7 +53,6 @@
           class="col-span-12 md:col-span-7 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'https://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[1].attributes.url +
             ');'
           "
@@ -67,7 +65,6 @@
           class="col-span-12 md:col-span-7 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'https://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[2].attributes.url +
             ');'
           "
@@ -80,7 +77,6 @@
           class="col-span-12 md:col-span-5 bg-image h-40 md:h-64 lg:h-96"
           :style="
             'background-image: url(' +
-            'https://mk-portfolio-backend.herokuapp.com' +
             project.data[0].attributes.images.data[3].attributes.url +
             ');'
           "
