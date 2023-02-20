@@ -18,10 +18,7 @@
           </p>
           <div class="flex flex-wrap gap-4">
             <NuxtLink
-              :to="
-                'https://mk-portfolio-backend.herokuapp.com' +
-                exp.attributes.recommendation.data.attributes.url
-              "
+              :to="exp.attributes.recommendation.data.attributes.url"
               target="__blank"
             >
               <PrimaryButton class="md:w-max mt-4"
@@ -40,10 +37,7 @@
         <p class="pb-6 text-xl lg:text-2xl">See full resume</p>
         <NuxtLink
           v-if="page.data"
-          :href="
-            'https://mk-portfolio-backend.herokuapp.com' +
-            page.data.attributes.cv.data.attributes.url
-          "
+          :href="page.data.attributes.cv.data.attributes.url"
           target="__blank"
         >
           <PrimaryButton>View resume</PrimaryButton>
