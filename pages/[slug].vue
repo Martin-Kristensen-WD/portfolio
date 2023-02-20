@@ -9,7 +9,7 @@
         class="container mx-auto grid grid-cols-3 gap-6 md:gap-x-16 px-6 pt-6"
       >
         <div class="col-span-3">
-          <h1 class="text-primary py-2">
+          <h1 class="text-primary py-2 font-unbounded lg:text-4xl">
             {{ project.data[0].attributes.title }}
           </h1>
         </div>
