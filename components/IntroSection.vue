@@ -20,7 +20,7 @@
         <br />
         <p>
           I hope you’re having a great
-          <span class="italic">{{ showDay() }}</span
+          <span class="italic">{{ currentDay }}</span
           >!
         </p>
       </div>
@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
   props: {
     page: {
@@ -45,12 +46,36 @@ export default {
       default: () => {},
     },
   },
-  methods: {
-    showDay() {
-      const dateObj = new Date()
-      const weekday = dateObj.toLocaleString('default', { weekday: 'long' })
-      return weekday
-    },
+  setup() {
+    const currentDay = ref('')
+
+    currentDay.value = new Date().getDay()
+
+    switch (currentDay.value) {
+      case 0:
+        currentDay.value = 'Sunday'
+        break
+      case 1:
+        currentDay.value = 'Monday'
+        break
+      case 2:
+        currentDay.value = 'Tuesday'
+        break
+      case 3:
+        currentDay.value = 'Wednesday'
+        break
+      case 4:
+        currentDay.value = 'Thursday'
+        break
+      case 5:
+        currentDay.value = 'Friday'
+        break
+      case 6:
+        currentDay.value = 'Saturday'
+    }
+    return {
+      currentDay,
+    }
   },
 }
 </script>

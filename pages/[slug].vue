@@ -97,44 +97,44 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
-  data() {
-    return {
-      project: {},
-      error: null,
-      headers: { 'Content-Type': 'application/json' },
-    }
-  },
+  setup() {
+    const project = ref({})
 
-  async mounted() {
-    const { slug } = useRoute().params
-    try {
-      const response = await fetch(
-        `https://mk-portfolio-backend.herokuapp.com/api/projects?filters[slug][$eq]=${slug}&populate=*`,
-        {
-          method: 'GET',
-        }
-      )
-        .then(this.checkStatus)
-        .then(this.parseJSON)
-      this.project = response
-    } catch (error) {
-      this.error = error
-    }
-  },
-
-  methods: {
-    parseJSON: function (resp) {
+    function parseJSON(resp) {
       return resp.json ? resp.json() : resp
-    },
-    checkStatus: function (resp) {
+    }
+
+    function checkStatus(resp) {
       if (resp.status >= 200 && resp.status < 300) {
         return resp
       }
       return this.parseJSON(resp).then((resp) => {
         throw resp
       })
-    },
+    }
+
+    onMounted(async () => {
+      const { slug } = useRoute().params
+      try {
+        const response = await fetch(
+          `https://mk-portfolio-backend.herokuapp.com/api/projects?filters[slug][$eq]=${slug}&populate=*`,
+          {
+            method: 'GET',
+          }
+        )
+          .then(checkStatus)
+          .then(parseJSON)
+        project.value = response
+      } catch (error) {
+        console.log(error)
+      }
+    })
+
+    return {
+      project,
+    }
   },
 }
 </script>

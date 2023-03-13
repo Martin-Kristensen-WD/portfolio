@@ -8,80 +8,81 @@
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
-  data() {
-    return {
-      page: {},
-      projects: {},
-      experience: {},
-      error: null,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-  },
-  async mounted() {
-    try {
-      const response = await fetch(
-        'https://mk-portfolio-backend.herokuapp.com/api/page?populate=*',
-        {
-          method: 'GET',
-        }
-      )
-        .then(this.checkStatus)
-        .then(this.parseJSON)
-      this.page = response
-    } catch (error) {
-      this.error = error
-    }
+  setup() {
+    const page = ref({})
+    const projects = ref({})
+    const experience = ref({})
 
-    try {
-      const response2 = await fetch(
-        'https://mk-portfolio-backend.herokuapp.com/api/projects?populate=*',
-        {
-          method: 'GET',
-        }
-      )
-        .then(this.checkStatus)
-        .then(this.parseJSON)
-      this.projects = response2
-    } catch (error) {
-      this.error = error
-    }
-
-    try {
-      const response3 = await fetch(
-        'https://mk-portfolio-backend.herokuapp.com/api/experiences?populate=*&sort=createdAt:ASC',
-        {
-          method: 'GET',
-        }
-      )
-        .then(this.checkStatus)
-        .then(this.parseJSON)
-      this.experience = response3
-    } catch (error) {
-      this.error = error
-    }
-
-    const cursor = document.querySelector('.cursor')
-    document.addEventListener('mousemove', function (e) {
-      cursor.style.cssText =
-        'left: ' + e.clientX + 'px; top: ' + e.clientY + 'px;'
-    })
-  },
-
-  methods: {
-    parseJSON: function (resp) {
+    function parseJSON(resp) {
       return resp.json ? resp.json() : resp
-    },
-    checkStatus: function (resp) {
+    }
+
+    function checkStatus(resp) {
       if (resp.status >= 200 && resp.status < 300) {
         return resp
       }
       return this.parseJSON(resp).then((resp) => {
         throw resp
       })
-    },
+    }
+
+    onMounted(async () => {
+      try {
+        const response = await fetch(
+          'https://mk-portfolio-backend.herokuapp.com/api/page?populate=*',
+          {
+            method: 'GET',
+          }
+        )
+          .then(checkStatus)
+          .then(parseJSON)
+        page.value = response
+      } catch (error) {
+        console.log(error)
+      }
+
+      try {
+        const response2 = await fetch(
+          'https://mk-portfolio-backend.herokuapp.com/api/projects?populate=*',
+          {
+            method: 'GET',
+          }
+        )
+          .then(checkStatus)
+          .then(parseJSON)
+        projects.value = response2
+      } catch (error) {
+        console.log(error)
+      }
+
+      try {
+        const response3 = await fetch(
+          'https://mk-portfolio-backend.herokuapp.com/api/experiences?populate=*&sort=createdAt:ASC',
+          {
+            method: 'GET',
+          }
+        )
+          .then(checkStatus)
+          .then(parseJSON)
+        experience.value = response3
+      } catch (error) {
+        console.log(error)
+      }
+
+      const cursor = document.querySelector('.cursor')
+      document.addEventListener('mousemove', function (e) {
+        cursor.style.cssText =
+          'left: ' + e.clientX + 'px; top: ' + e.clientY + 'px;'
+      })
+    })
+
+    return {
+      page,
+      projects,
+      experience,
+    }
   },
 }
 </script>
