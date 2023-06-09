@@ -2,7 +2,7 @@
 
 ## Built with
 
-: Vue 3
-: Nuxt 
-: Tailwind.css 
-: Strapi (CMS) 
++ Vue 3
++ Nuxt 
++ Tailwind.css 
++ Strapi (CMS) 
